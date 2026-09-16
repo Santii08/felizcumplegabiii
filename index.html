@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Gabi — 21 Años</title>
+    <!-- Google Fonts for Editorial Human Design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Dancing+Script:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="warm-rose">
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Background Ambience -->
+    <div class="balloons-container" id="balloons-container"></div>
+
+    <!-- Music Toggle Button -->
+    <button id="music-btn" class="floating-btn music-btn" title="Música de fondo">
+        <span id="music-icon">🎵</span>
+    </button>
+
+    <!-- INTRO ENVELOPE SCREEN -->
+    <div id="envelope-screen" class="screen active">
+        <div class="envelope-glow"></div>
+        <div class="envelope-wrapper" id="envelope">
+            <div class="envelope">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <div class="letter-preview">
+                        <span class="preview-seal-icon">✦</span>
+                        <p class="preview-text">Para Gabi</p>
+                        <span class="preview-sub">Un detalle especial</span>
+                    </div>
+                </div>
+                <div class="envelope-seal">G</div>
+            </div>
+            <div class="tap-hint">
+                <p class="hint-text">Presiona el sobre para abrir la carta</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN BIRTHDAY CARD SCREEN -->
+    <div id="card-screen" class="screen hidden">
+        <div class="main-container">
+            
+            <!-- HEADER / BANNER -->
+            <header class="card-header">
+                <span class="editorial-tag">21° Aniversario — Septiembre</span>
+                <h1 class="birthday-title">Feliz Cumpleaños, <span id="display-name">Gabi</span></h1>
+                <p class="subtitle" id="display-subtitle">Celebrando tus 21 años y la luz que le entregas a quienes te rodean</p>
+                <div class="editorial-divider">✦</div>
+            </header>
+
+            <!-- MAIN CARD LAYOUT -->
+            <main class="card-content">
+                
+                <!-- POLAROID PHOTO FRAME -->
+                <div class="polaroid-wrapper">
+                    <div class="tape top-left"></div>
+                    <div class="tape top-right"></div>
+                    <div class="polaroid">
+                        <div class="photo-container">
+                            <img id="display-photo" src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=800&auto=format&fit=crop" alt="Fotografía de celebración">
+                        </div>
+                        <div class="polaroid-caption">
+                            <span id="display-caption">Felices 21 años, mi hermosa Gabi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LETTER MESSAGE -->
+                <div class="letter-card">
+                    <h2 class="letter-heading">Querida <span id="letter-recipient">Gabi</span>,</h2>
+                    
+                    <div class="letter-body" id="display-message">
+                        <p class="poem-intro">Felices 21.</p>
+                        <p>Dicen que las flores no necesitan anunciar que son bonitas; simplemente florecen, y quien las mira lo sabe.</p>
+                        <p>Creo que contigo pasa algo parecido.</p>
+                        <p>Tienes una belleza que no necesita explicación, porque se encuentra en la forma en que sonríes, en tu dulzura, en tu manera de ser y en esos pequeños detalles que hacen que seas imposible de confundir con alguien más.</p>
+                        <p>Si fueras una flor, no serías solamente aquella que destaca por sus colores, sino la que hace que alguien se detenga a contemplar el jardín un instante más.</p>
+                        <p>Si fueras una tarde, serías de esas en las que el cielo se pinta lentamente de colores y nadie quiere que llegue la noche.</p>
+                        <p>Si fueras una estrella, serías de esas que no necesitan ser la más brillante del cielo para conseguir que alguien levante la mirada y sonría.</p>
+                        <p>Y si fueras primavera, serías esa que llega después de un invierno largo y le recuerda al mundo que todavía existen cosas bonitas por florecer.</p>
+                        <p>Pero quizás la naturaleza se queda corta cuando intenta describir a alguien como tú, porque hay cosas que no caben en un paisaje, ni en una flor, ni siquiera en las palabras.</p>
+                        <p>Por eso deseo que tus 21 sean como un jardín en primavera:</p>
+                        <p>llenos de flores que representen sueños cumplidos, caminos nuevos por descubrir, días soleados, lluvias que te hagan crecer y momentos tan bonitos que quieras guardarlos para siempre.</p>
+                        <p>Que nunca dejes de florecer a tu manera.</p>
+                        <p>Que nunca permitas que nadie apague esa luz tan tuya.</p>
+                        <p>Y que, incluso en los días nublados, recuerdes que el sol nunca deja de existir; simplemente a veces se esconde detrás de las nubes.</p>
+                        <p>Hoy comienza otro capítulo de tu vida, y ojalá sea uno de los más bonitos: uno lleno de aventuras, de aprendizajes, de risas, de personas que te quieran bonito y de momentos que hagan que tu corazón diga:</p>
+                        <p class="poem-highlight">“Qué bonito es estar aquí.”</p>
+                        <p>Porque el mundo es un lugar un poquito más bonito simplemente porque tú estás en él.</p>
+                        <p class="poem-closing">Feliz cumpleaños, hermosa Gabi.</p>
+                        <p class="poem-closing">Felices 21 años.</p>
+                    </div>
+
+                    <div class="letter-footer">
+                        <p class="signature-note">Con todo mi cariño,</p>
+                        <p class="signature" id="display-sender">Con mucho amor y cariño</p>
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- INVITATION CARD -->
+            <section class="royal-scroll">
+                <span class="scroll-crown-icon">✦</span>
+                <h2 class="scroll-title">Una Cita Especial</h2>
+                <span class="scroll-sub-header">Diseñada especialmente para ti</span>
+                <div class="scroll-divider"></div>
+                
+                <p class="scroll-text">
+                    Para la mujer más hermosa y mi princesa favorita, <strong>Gabi</strong>:<br>
+                    Estás cordialmente invitada a comenzar la celebración de tus 21 años.
+                </p>
+                
+                <div class="invitation-details">
+                    <div class="detail-box">
+                        <span class="detail-label">Hora de Encuentro</span>
+                        <p class="detail-value">Mañana entre 1:30 p.m. y 2:00 p.m.</p>
+                        <span class="detail-desc">Pasaré a recogerte por tu palacio</span>
+                    </div>
+                    <div class="detail-box alert-box">
+                        <span class="detail-label">Nota Especial</span>
+                        <p class="detail-value">Por favor, ven sin almorzar</p>
+                        <span class="detail-desc">Nuestra primera parada será un almuerzo delicioso preparado para ti</span>
+                    </div>
+                </div>
+                
+                <div class="scroll-seal">Pase Especial de Cumpleaños</div>
+            </section>
+
+            <!-- CAKE SECTION -->
+            <section class="cake-section">
+                <h3 class="section-title">Pide un deseo y sopla tus 21 velas</h3>
+                
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="plate"></div>
+                        <div class="layer layer-bottom"></div>
+                        <div class="layer layer-middle"></div>
+                        <div class="layer layer-top"></div>
+                        <div class="icing"></div>
+                        
+                        <!-- CANDLES -->
+                        <div class="candles-container" id="candles-container">
+                            <div class="candle" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="smoke"></div>
+                            </div>
+                            <div class="candle" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="smoke"></div>
+                            </div>
+                            <div class="candle" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="smoke"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cake-controls">
+                    <button id="blow-btn" class="action-btn">
+                        Soplar las velas
+                    </button>
+                    <button id="rekindle-btn" class="action-btn secondary hidden">
+                        Encender de nuevo
+                    </button>
+                </div>
+                
+                <p id="wish-message" class="wish-message hidden">
+                    ¡Deseo concedido, mi hermosa Gabi! Que todos tus sueños se hagan realidad.
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
